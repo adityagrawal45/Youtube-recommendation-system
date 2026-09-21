@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Recommender</title>
+  <link rel="stylesheet" href="app.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Video Recommender</h1>
+    <p class="subtitle">Search for a title to get similar recommendations.</p>
+
+    <div class="search-box">
+      <input id="search" type="text" placeholder="Search titles, e.g. Toy Story" autocomplete="off" />
+      <div id="suggestions" class="suggestions"></div>
+    </div>
+
+    <h2 id="results-heading" class="results-heading" hidden></h2>
+    <div id="results" class="results"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
