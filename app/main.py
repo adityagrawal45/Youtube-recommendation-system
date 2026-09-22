@@ -16,11 +16,13 @@ def search(q: str = "", limit: int = 10):
 
 
 @app.get("/api/recommend/{movie_id}")
-def recommend(movie_id: int, top_n: int = 10):
+def recommend(movie_id: int, top_n: int = 10, method: str = "hybrid"):
     try:
-        return get_recommendations(movie_id, top_n)
+        return get_recommendations(movie_id, top_n, method=method)
     except KeyError:
         raise HTTPException(status_code=404, detail=f"movie_id {movie_id} not found")
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
 
 
 app.mount("/", StaticFiles(directory=FRONTEND_DIR, html=True), name="frontend")
