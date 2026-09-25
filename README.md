@@ -23,8 +23,8 @@ titles ranked by shared genres/tags.
 
 ## API
 
-- `GET /api/search?q=toy&limit=10` — title search for autocomplete.
-- `GET /api/recommend/{movie_id}?top_n=10` — top-N similar titles by content similarity.
+- `GET /api/search?q=toy&limit=10` - title search for autocomplete.
+- `GET /api/recommend/{movie_id}?top_n=10` - top-N similar titles by content similarity.
 
 Interactive docs available at http://127.0.0.1:8000/docs.
 
